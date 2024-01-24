@@ -1,6 +1,6 @@
 {
-  "name": "closed-chain-ik",
-  "version": "0.0.2",
+  "name": "closed-chain-ik-tiny",
+  "version": "0.0.3",
   "description": "A generalized inverse kinematics solver that supports closed chains for parallel kinematics systems, dynamic reconfiguration, and arbitrary joint configuration based on damped least squares error minimization techniques",
   "keywords": [
     "inverse-kinematics",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gkjohnson/closed-chain-ik-js.git"
+    "url": "git@github.com:arcnc/closed-chain-ik-js-tiny.git"
   },
   "author": "Garrett Johnson <garrett.kjohnson@gmail.com>",
   "bugs": {
@@ -52,14 +52,7 @@
     "jest": "^26.4.2",
     "jest-cli": "^26.4.2",
     "parcel-bundler": "^1.12.4",
-    "static-server": "^2.2.1",
-    "three": "^0.120.1",
-    "urdf-loader": "^0.9.1",
-    "xacro-parser": "^0.2.2"
-  },
-  "peerDependencies": {
-    "three": "^0.120.1",
-    "urdf-loader": "^0.9.1"
+    "static-server": "^2.2.1"
   },
   "license": "Apache-2.0"
 }
