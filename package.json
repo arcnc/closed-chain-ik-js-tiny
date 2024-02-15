@@ -1,6 +1,6 @@
 {
   "name": "closed-chain-ik-tiny",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A generalized inverse kinematics solver that supports closed chains for parallel kinematics systems, dynamic reconfiguration, and arbitrary joint configuration based on damped least squares error minimization techniques",
   "keywords": [
     "inverse-kinematics",
@@ -18,16 +18,16 @@
     "urdf",
     "ik"
   ],
-  "type": "module",
   "files": [
-    "src/*"
+    "lib/*"
   ],
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "concurrently \"parcel watch ./example/*.html --out-dir local --public-url .\" \"static-server\"",
-    "build": "parcel build --out-dir dist --no-content-hash ./example/*.html --public-url .",
+    "build": "babel src -d lib",
     "lint": "eslint \"./src/**/*.js\" \"./test/**/*.js\"",
-    "test": "jest"
+    "test": "jest",
+    "publish": "yarn build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "svd-js": "^1.1.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "concurrently": "^5.3.0",
