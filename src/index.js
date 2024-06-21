@@ -5,6 +5,7 @@ import { Solver } from './core/Solver.js';
 import { SOLVE_STATUS, SOLVE_STATUS_NAMES } from './core/ChainSolver.js';
 import { WorkerSolver } from './worker/WorkerSolver.js';
 import { findRoots } from './core/utils/findRoots.js';
+import { serialize, deserialize } from './worker/serialize.js';
 
 export {
 	Link,
@@ -18,4 +19,6 @@ export {
 	SOLVE_STATUS_NAMES,
 
 	findRoots,
+	serialize,
+	deserialize
 };
